@@ -15,7 +15,7 @@ export default function ProSolarEstimator() {
   const [grounding, setGrounding] = useState("");
   const [monthlyBill, setMonthlyBill] = useState(0);
   const [panelType, setPanelType] = useState("topcon");
-  const [safetyChecks, setSafetyChecks] = useState({ afci: false, islanding: false, approved: false });
+  const [safetyChecks, setSafetyChecks] = useState<Record<string, boolean>>({ afci: false, islanding: false, approved: false });
   const [systemType, setSystemType] = useState("on_grid");
   const [hasETax, setHasETax] = useState(false);
 
