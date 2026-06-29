@@ -26,7 +26,7 @@ export default function ProSolarEstimator() {
   const groundingFailed = grounding !== "" && Number(grounding) > 5;
   const slowRoiWarning = monthlyBill > 0 && monthlyBill < 3000;
 
-  const panelInfo = {
+  const panelInfo: Record<string, any> = {
     mono: { name: "Mono PERC (P-type)", eff: "20.5-22%", deg: "0.45-0.50%/ปี" },
     topcon: { name: "TOPCon (N-type)", eff: "22-24.5%", deg: "0.35-0.40%/ปี", highlight: "Recommended (คุ้มค่าสุดในไทย ทนร้อนดี)" },
     hjt: { name: "HJT (N-type)", eff: "24-25.5%", deg: "0.25-0.30%/ปี" },
